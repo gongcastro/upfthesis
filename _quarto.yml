@@ -10,7 +10,7 @@ supervisor: Dr. Awesome Thesis
 date: "2023"
 date-format: "YYYY"
 chapters:
-  - "index.qmd"
+  - index.qmd
   - "00_dedication.qmd"
   - "01_acknowledgements.qmd"
   - "02_abstract.qmd"
