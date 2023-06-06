@@ -62,3 +62,5 @@ rsconnect/
 *.cb
 *.cb2
 .*.lb
+
+/.quarto/

@@ -28,3 +28,12 @@ thesis:
 format:
   upfthesis-pdf: default
   upfthesis-docx: default
+
+fig-dpi: 500
+fig-align: center
+crossref: 
+  fig-title: Fig     # (default is "Figure")
+  tbl-title: Tab.
+lang: en
+
+references: references.bib
