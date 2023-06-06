@@ -208,7 +208,6 @@
   \let\footnoterule\relax
   \let \footnote \thanks
   \null\vfil
-%  \vskip 60\p@
   \begin{flushleft}%
     {\LARGE \sffamily \@title \par}%
     \vspace*{2cm}
@@ -227,7 +226,7 @@
     {\large Department \@department} \par
     \vspace{2cm}
    \centering
-    \includegraphics[scale=0.4]{logo_upf.png}
+    \includegraphics[scale=0.4]{assets/logo_upf.png}
    \end{flushleft}\par
 %  \@thanks
 % \vfil\null
@@ -236,7 +235,7 @@
   \global\let\thanks\relax
   \global\let\maketitle\relax
   \global\let\@thanks\@empty
-  \global\let\@author\@empty
+  %\global\let\@author\@empty
   \global\let\@date\@empty
   \global\let\@title\@empty
   %
@@ -269,10 +268,10 @@
     \thispagestyle{plain}\@thanks
   \endgroup
   \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@maketitle\relax
-  \global\let\@thanks\@empty
+  %\global\let\thanks\relax
+  %\global\let\maketitle\relax
+  % \global\let\@maketitle\relax
+  % \global\let\@thanks\@empty
   \global\let\@author\@empty
   \global\let\@date\@empty
   \global\let\@title\@empty
@@ -320,44 +319,40 @@
 %%%
 %P�gines en blanc
 %Fa que les p�gines en blanc no tinguin numeraci�
-\let\origdoublepage\cleardoublepage
-\renewcommand{\cleardoublepage}{%
-  \clearpage
-  {\pagestyle{empty}\origdoublepage}%
-}
+% \let\origdoublepage\cleardoublepage
+% \renewcommand{\cleardoublepage}{%
+%   \clearpage
+%   {\pagestyle{empty}\origdoublepage}%
+% }
 
 %%%
 
 \newcommand\frontmatter{%
-    \cleardoublepage
   \@mainmatterfalse
   \pagenumbering{roman}}
 \newcommand\mainmatter{%
-    \cleardoublepage
   \@mainmattertrue
   \pagenumbering{arabic}}
 \newcommand\backmatter{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
+  % \if@openright
+  % \else
+  %   \clearpage
+  % \fi
   \@mainmatterfalse}
-\newcommand\part{%
-  \if@openright
-    \cleardoublepage
-  \else
-    \clearpage
-  \fi
-  \thispagestyle{plain}%
-  \if@twocolumn
-    \onecolumn
-    \@tempswatrue
-  \else
-    \@tempswafalse
-  \fi
-  \null\vfil
-  \secdef\@part\@spart}
+% \newcommand\part{%
+%   \if@openright
+%   \else
+%     \clearpage
+%   \fi
+%   \thispagestyle{plain}%
+%   \if@twocolumn
+%     \onecolumn
+%     \@tempswatrue
+%   \else
+%     \@tempswafalse
+%   \fi
+%   \null\vfil
+%   \secdef\@part\@spart}
 
 \def\@part[#1]#2{%
     \ifnum \c@secnumdepth >-2\relax
@@ -394,7 +389,7 @@
               \if@tempswa
                 \twocolumn
               \fi}
-\newcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+\newcommand\chapter{\if@openright\clearpage\else\clearpage\fi
                     \thispagestyle{plain}%
                     \global\@topnum\z@
                     \@afterindentfalse
