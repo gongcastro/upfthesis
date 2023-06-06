@@ -1,0 +1,79 @@
+\documentclass[12pt, b5paper,twoside]{templates/upf-thesis}
+
+% LENGUAGE
+\usepackage[english,catalan]{babel}
+
+% ONLY TO OBTAIN MARK BANK INDEX INDICATION B5
+\usepackage[b5paper]{geometry}
+\usepackage[cam,a4,center,frame]{crop}
+\usepackage{bookmark}
+\usepackage{booktabs}
+
+% INCLUDE GRAPHICS AND THE LOGO OF THE UPF
+\usepackage{graphicx}
+
+% FONTS TIMES OR GARAMOND,
+\usepackage{times}
+%\usepackage{garamond}
+
+% WITHOUT HEADINGS: NO MODIFICATION
+\pagestyle{plain}
+
+% FOR THE INDEX OF SUBJECTS
+\usepackage{makeidx}
+\makeindex
+
+%BIBLIOGRAPHY STYLE
+\bibliographystyle{apalike}
+
+%SELECT LANGUAGE
+\selectlanguage{english}
+
+%THE TABLE OF CONTENTS IS TITLE CONTENTS
+\addto\captionscatalan
+  {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
+
+%ADD YOUR DATA
+\title{$title$}
+$if(subtitle)$\subtitle{$subtitle$}$endif$
+\author{$author$}
+\thyear{$date$}
+\department{$department$}
+\supervisor{$supervisor$}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\cleardoublepage
+
+\newenvironment{CSLReferences}
+
+$body$
+
+\backmatter
+\printindex
+
+\end{document}
+
+%NUMBER OF THE EXTERNAL PAGE EXCEPT IN THE FIRST PAGE OF EACH CAPITAL
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[RO]{\thepage}
+\fancyfoot[LE]{\thepage}
+
+%MULTIPLE INDEX
+%In the preamble
+\usepackage{multind}
+\makeindex{authors}
+%Introduction to form entries
+\index{authors}{Einstein}
+%Situation of the Index
+\printindex{authors}{Author index}
+%The \ usepakage {makeidx} \ makeindex \ printindex commands must be removed
+%You need to exacute from the command line makeindex authors
+
+
