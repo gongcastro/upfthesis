@@ -10,15 +10,15 @@ book:
   date-format: "YYYY"
   chapters:
     - index.qmd
-    - 00-dedication.qmd
-    - 01-acknowledgements.qmd
-    - 02-abstract.qmd
-    - 03-preface.qmd
-    - 04-introduction.qmd
-    - 05-chapter-1.qmd
-    - 06-chapter-2.qmd
-    - 07-discussion.qmd
-    - 08-references.qmd
+    - chapters/00-dedication.qmd
+    - chapters/01-acknowledgements.qmd
+    - chapters/02-abstract.qmd
+    - chapters/03-preface.qmd
+    - chapters/04-introduction.qmd
+    - chapters/05-chapter-1.qmd
+    - chapters/06-chapter-2.qmd
+    - chapters/07-discussion.qmd
+    - chapters/08-references.qmd
   output-file: thesis
 
 thesis:
