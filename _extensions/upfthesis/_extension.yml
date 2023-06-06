@@ -12,6 +12,8 @@ contributes:
       toc: true
     pdf:
       template: template.tex
+      format-resources:
+        - upfthesis.cls
       pdf-engine: pdflatex
       papersize: B5
       fontsize: 12pt
