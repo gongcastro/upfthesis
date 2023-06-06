@@ -1,6 +1,0 @@
-PWD c:/Users/gonza/Documents/upfthesis/_extensions/upfthesis/templates
-INPUT c:/Users/gonza/AppData/Roaming/TinyTeX/texmf.cnf
-INPUT c:/Users/gonza/AppData/Roaming/TinyTeX/texmf-dist/web2c/texmf.cnf
-INPUT c:/Users/gonza/AppData/Roaming/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/gonza/Documents/upfthesis/_extensions/upfthesis/templates/template.tex
-OUTPUT template.log
