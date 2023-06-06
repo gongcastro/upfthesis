@@ -20,7 +20,8 @@ contributes:
       fontsize: 12pt
       classoption: [twoside]
     docx:
-      reference-doc: templates/template.docx
+      template: templates/template.doc
+      reference-doc: templates/template.doc
       knitr:
         opts_chunk:
           dev: "png"
