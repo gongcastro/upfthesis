@@ -226,7 +226,7 @@
     {\large Department \@department} \par
     \vspace{2cm}
    \centering
-    \includegraphics[scale=0.4]{assets/logo_upf.png}
+    \includegraphics[scale=0.4]{logo_upf.png}
    \end{flushleft}\par
 %  \@thanks
 % \vfil\null
