@@ -1,7 +1,7 @@
 \documentclass[12pt, b5paper,twoside]{upfthesis}
 
 % LENGUAGE
-\usepackage[english,catalan]{babel}
+\usepackage[english]{babel}
 
 % ONLY TO OBTAIN MARK BANK INDEX INDICATION B5
 \usepackage[b5paper]{geometry}
@@ -11,7 +11,8 @@
 
 % INCLUDE GRAPHICS AND THE LOGO OF THE UPF
 \usepackage{graphicx}
-
+\usepackage{caption}
+\usepackage{longtable}
 % FONTS TIMES OR GARAMOND,
 \usepackage{times}
 %\usepackage{garamond}
@@ -30,10 +31,10 @@
 \selectlanguage{english}
 
 %ADD YOUR DATA
-\title{$title$}
-$if(subtitle)$\subtitle{$subtitle$}$endif$
-\author{$author$}
-\thyear{$date$}
+\title{$thesis.title$}
+$if(thesis.subtitle)$\subtitle{$thesis.subtitle$}$endif$
+\author{$thesis.author$}
+\thyear{$thesis.date$}
 \department{$thesis.department$}
 \supervisor{$thesis.supervisor$}
 
@@ -46,26 +47,7 @@ $if(subtitle)$\subtitle{$subtitle$}$endif$
 $body$
 
 \backmatter
+
 \printindex
 
 \end{document}
-
-%NUMBER OF THE EXTERNAL PAGE EXCEPT IN THE FIRST PAGE OF EACH CAPITAL
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyfoot{}
-\fancyfoot[RO]{\thepage}
-\fancyfoot[LE]{\thepage}
-
-%MULTIPLE INDEX
-%In the preamble
-\usepackage{multind}
-\makeindex{authors}
-%Introduction to form entries
-\index{authors}{Einstein}
-%Situation of the Index
-\printindex{authors}{Author index}
-%The \ usepakage {makeidx} \ makeindex \ printindex commands must be removed
-%You need to exacute from the command line makeindex authors
-
-

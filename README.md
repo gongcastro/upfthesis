@@ -6,7 +6,9 @@
 quarto use template gongcastro/upfthesis
 ```
 
-This will install the extension and create an set up the structure of the project. Several folders and files will be created:
+This will install the extension and create an set up the structure of the project. If you are used to working from RStudio, I recommend you create a new project in this same folder.
+
+This directory contains several sub-directories and files:
 
 * [**_quarto.yml**](_quarto.yml): this is a YAML file with the global settings of the thesis. Here you can change the title, authors, department, etc. You can change most settings as indicated in the [Book Options](https://quarto.org/docs/reference/projects/books.html) section of the Quarto reference. Some of these settings are internally set in the [_extension.yml](_extensions/gongcastro/upfthesis/_extension.yml) file; feel free to change them if you know what you are doing. 
 * **chapters/** contains the Quarto (`.qmd`) files with the body of the thesis. Each section embedded in a different file. The chapters included are based on the [Theses: Parts and content](https://guiesbibtic.upf.edu/tesis/eng/parts) section of the [Guies BibTIC UPF](https://guiesbibtic.upf.edu/tesis/eng/parts) website. Some of these sections might not be required. If so, you may keep them from being included in the rendered output by removing them from the [**_quarto.yml**](_quarto.yml) file (`chapters:`) section. For example, here I am commenting out the *Preface* section, which is not required:
@@ -33,7 +35,7 @@ chapters:
 * **references.bib** contains the BibTex references of the thesis. I you are using a reference manager (I strongly recommend using Zotero) you can export you library and replace this file with you desired references. You can also introduce you references manually in BibTex format (e.g., by copy-pasting them from Google Scholar). If you have more tha one `.bib` document or your `.bib` document is named differently, you can do the appropriate changes in the `_quarto.yml` file. For instance, this is how you can indicate more than one `.bib` file:
 
 ```yaml
-references:
+bibliography:
   - references.bib
   - other-references.bib
 ```
