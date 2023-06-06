@@ -11,19 +11,17 @@ date: "2023"
 date-format: "YYYY"
 chapters:
   - "index.qmd"
-  - "chapters/00_dedication.qmd"
-  - "chapters/01_acknowledgements.qmd"
-  - "chapters/02_abstract.qmd"
-  - "chapters/03_preface.qmd"
-  - "chapters/04_introduction.qmd"
-  - "chapters/05_chapter-1.qmd"
-  - "chapters/06_chapter-2.qmd"
-  - "chapters/07_discussion.qmd"
-  - "chapters/08_references.qmd"
+  - "00_dedication.qmd"
+  - "01_acknowledgements.qmd"
+  - "02_abstract.qmd"
+  - "03_preface.qmd"
+  - "04_introduction.qmd"
+  - "05_chapter-1.qmd"
+  - "06_chapter-2.qmd"
+  - "07_discussion.qmd"
+  - "08_references.qmd"
 output-file: "thesis"
 
 format:
   upfthesis-pdf: default
   upfthesis-docx: default
-    
-
