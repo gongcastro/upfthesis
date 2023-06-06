@@ -11,7 +11,7 @@ contributes:
     common:
       toc: true
     pdf:
-      template: templates/template.tex
+      template: template.tex
       pdf-engine: pdflatex
       papersize: B5
       fontsize: 12pt
