@@ -1,4 +1,4 @@
-\documentclass[12pt, b5paper,twoside]{upfthesis}
+\documentclass[12pt, b5paper,twoside]{templates/upf-thesis}
 
 % LENGUAGE
 \usepackage[english,catalan]{babel}
@@ -29,10 +29,6 @@
 %SELECT LANGUAGE
 \selectlanguage{english}
 
-%THE TABLE OF CONTENTS IS TITLE CONTENTS
-\addto\captionscatalan
-  {\renewcommand{\contentsname}{\Large \sffamily Sumari}}
-
 %ADD YOUR DATA
 \title{$title$}
 $if(subtitle)$\subtitle{$subtitle$}$endif$
@@ -46,10 +42,6 @@ $if(subtitle)$\subtitle{$subtitle$}$endif$
 \frontmatter
 
 \maketitle
-
-\cleardoublepage
-
-\newenvironment{CSLReferences}
 
 $body$
 

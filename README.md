@@ -1,4 +1,4 @@
-# upfthesis Format
+# upfthesis format
 
 ## Installing
 
@@ -6,9 +6,9 @@
 quarto use template gongcastro/upfthesis
 ```
 
+This will install the extension and create an set up the structure of the project. Several folders and files will be created:
 
-
-This will install the extension and create an example qmd file that you can use as a starting place for your article.
+* 
 
 ## Using
 
