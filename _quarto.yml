@@ -11,10 +11,10 @@ book:
     - chapters/02-abstract.qmd
     - chapters/03-preface.qmd
     - chapters/04-introduction.qmd
-    #- chapters/05-chapter-1.qmd
-    #- chapters/06-chapter-2.qmd
-    #- chapters/07-discussion.qmd
-    #- chapters/08-references.qmd
+    - chapters/05-chapter-1.qmd
+    - chapters/06-chapter-2.qmd
+    - chapters/07-discussion.qmd
+    - chapters/08-references.qmd
   output-file: thesis
 
 thesis:
@@ -26,7 +26,9 @@ thesis:
   supervisor: Dr. Awesome Supervisor
 
 format:
-  upfthesis-pdf: default
+  upfthesis-pdf:
+    page-crop: off # cam, crop, frame
+    page-info: noinfo # info, noinfo
   upfthesis-docx: default
 
 fig-dpi: 500

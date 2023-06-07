@@ -11,6 +11,8 @@ contributes:
     common:
       toc: true
     pdf:
+      template-partials:
+        - partials/doc-class.tex
       template: template.tex
       format-resources:
         - upfthesis.cls
