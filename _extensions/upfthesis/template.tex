@@ -9,6 +9,10 @@
 \usepackage{bookmark}
 \usepackage{booktabs}
 
+% for bibliography
+%\usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
+%\addbibresource{$bibliography$}
+
 % INCLUDE GRAPHICS AND THE LOGO OF THE UPF
 \usepackage{graphicx}
 \usepackage{caption}
@@ -25,7 +29,7 @@
 \makeindex
 
 %BIBLIOGRAPHY STYLE
-\bibliographystyle{apalike}
+%\bibliographystyle{apalike}
 
 %SELECT LANGUAGE
 \selectlanguage{english}
@@ -45,6 +49,7 @@ $if(thesis.subtitle)$\subtitle{$thesis.subtitle$}$endif$
 \maketitle
 
 $body$
+
 
 \backmatter
 

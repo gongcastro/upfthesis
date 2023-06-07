@@ -11,8 +11,6 @@ contributes:
     common:
       toc: true
     pdf:
-      template-partials:
-        - partials/doc-class.tex
       template: template.tex
       format-resources:
         - upfthesis.cls
@@ -22,8 +20,8 @@ contributes:
       fontsize: 12pt
       classoption: [twoside]
     docx:
-      template: templates/template.doc
-      reference-doc: templates/template.doc
+      #template: templates/reference.docx
+      reference-doc: templates/reference.docx
       knitr:
         opts_chunk:
           dev: "png"

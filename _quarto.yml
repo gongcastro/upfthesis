@@ -14,28 +14,24 @@ book:
     - chapters/05-chapter-1.qmd
     - chapters/06-chapter-2.qmd
     - chapters/07-discussion.qmd
-    - chapters/08-references.qmd
   output-file: thesis
 
 thesis:
   title: My thesis at Universitat Pompeu Fabra
   subtitle: A Quarto extension and template
   author: Gonzalo Garcia-Castro
-  date: "2023"
+  date: 2023
   department: Department of Templates
   supervisor: Dr. Awesome Supervisor
 
 format:
   upfthesis-pdf:
-    page-crop: off # cam, crop, frame
+    page-crop: cam # cam, crop, frame
     page-info: noinfo # info, noinfo
   upfthesis-docx: default
 
 fig-dpi: 500
 fig-align: center
-crossref: 
-  fig-title: Fig     # (default is "Figure")
-  tbl-title: Tab.
 lang: en
 
 echo: false
