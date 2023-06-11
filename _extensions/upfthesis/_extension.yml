@@ -11,7 +11,12 @@ contributes:
     common:
       toc: true
     pdf:
-      template: template.tex
+      template: template.tex    
+      template-partials:
+        - partials/pandoc.tex
+        - partials/title.tex
+        - partials/citations.tex
+        - partials/toc.tex
       format-resources:
         - upfthesis.cls
         - logo_upf.png
@@ -19,6 +24,7 @@ contributes:
       papersize: B5
       fontsize: 12pt
       classoption: [twoside]
+      toc: true
     docx:
       #template: templates/reference.docx
       reference-doc: templates/reference.docx

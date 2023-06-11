@@ -28,6 +28,7 @@ format:
   upfthesis-pdf:
     page-crop: cam # cam, crop, frame
     page-info: noinfo # info, noinfo
+    toc: true
   upfthesis-docx: default
 
 fig-dpi: 500

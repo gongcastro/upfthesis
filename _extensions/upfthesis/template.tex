@@ -1,11 +1,12 @@
 \documentclass[12pt, b5paper,twoside]{upfthesis}
 
-% LENGUAGE
-\usepackage[english]{babel}
-
-% ONLY TO OBTAIN MARK BANK INDEX INDICATION B5
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{times}
+\usepackage{makeidx}
 \usepackage[b5paper]{geometry}
-\usepackage[$page-crop$, $page-info$, a4,center]{crop} % cam for corner marks, frame for frame
+\usepackage[$page-crop$, $page-info$, a4, center]{crop} % cam for corner marks, frame for frame
 \usepackage{bookmark}
 \usepackage{booktabs}
 
@@ -13,34 +14,17 @@
 %\usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
 %\addbibresource{$bibliography$}
 
-% INCLUDE GRAPHICS AND THE LOGO OF THE UPF
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{longtable}
-% FONTS TIMES OR GARAMOND,
-\usepackage{times}
-%\usepackage{garamond}
-
 % WITHOUT HEADINGS: NO MODIFICATION
 \pagestyle{plain}
 
 % FOR THE INDEX OF SUBJECTS
-\usepackage{makeidx}
 \makeindex
 
 %BIBLIOGRAPHY STYLE
 %\bibliographystyle{apalike}
 
-%SELECT LANGUAGE
-\selectlanguage{english}
-
 %ADD YOUR DATA
-\title{$thesis.title$}
-$if(thesis.subtitle)$\subtitle{$thesis.subtitle$}$endif$
-\author{$thesis.author$}
-\thyear{$thesis.date$}
-\department{$thesis.department$}
-\supervisor{$thesis.supervisor$}
+$title.tex()$
 
 \begin{document}
 
@@ -48,8 +32,12 @@ $if(thesis.subtitle)$\subtitle{$thesis.subtitle$}$endif$
 
 \maketitle
 
+%TABLE OF CONTENTS: REQUIRED
+$toc.tex()$
+
 $body$
 
+$citations.tex()$
 
 \backmatter
 
