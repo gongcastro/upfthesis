@@ -846,6 +846,7 @@
 
 \let\l@table\l@figure
 
+
 % bibliography
 % the "open" bibliography format uses an indentation of \bibindent.
 \newdimen\bibindent
@@ -857,6 +858,7 @@
 \setlength{\csllabelwidth}{3em}
 \newlength{\cslentryspacingunit} % times entry-spacing
 \setlength{\cslentryspacingunit}{\parskip}
+
 \newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
  {% don't indent paragraphs
   \setlength{\parindent}{0pt}
@@ -921,7 +923,7 @@
 \newcommand\contentsname{Contents}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
-\newcommand\bibname{bibliography}
+\newcommand\bibname{Bibliography}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
 \newcommand\tablename{Table}

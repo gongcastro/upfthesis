@@ -15,8 +15,8 @@ contributes:
       template-partials:
         - partials/pandoc.tex
         - partials/title.tex
-        - partials/citations.tex
         - partials/toc.tex
+        - partials/biblio.tex
       format-resources:
         - upfthesis.cls
         - logo_upf.png
@@ -24,6 +24,7 @@ contributes:
       papersize: B5
       fontsize: 12pt
       classoption: [twoside]
+      biblio-title: Bibliography
       toc: true
     docx:
       #template: templates/reference.docx
