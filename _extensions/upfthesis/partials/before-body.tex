@@ -1,0 +1,89 @@
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+
+\begin{titlepage}
+    \null\vfil
+    \pagenumbering{gobble} 
+    \begin{flushleft}%
+      {\LARGE \sffamily $thesis.title$ \par}%
+      \vspace*{2cm}
+      {\Large \sffamily $thesis.subtitle$ \par}%
+      \vskip 1cm%
+      {\large \lineskip .75em \begin{tabular}[t]{c} {\Huge $thesis.author$} \end{tabular}\par}
+      \rule{\linewidth}{1mm} \par
+      \vskip 1cm%
+      {\large TESI DOCTORAL UPF / Year $thesis.date$}\\[2cm]
+      {\normalsize THESIS SUPERVISOR}\par
+      {\large $thesis.supervisor$}\par
+      {\large $thesis.department$} \par
+      \vspace{2cm}
+     \centering
+      \includegraphics[width=5cm]{logo_upf.png}
+     \end{flushleft}\par
+     \afterpage{\blankpage}
+\end{titlepage}
+
+
+\newpage
+
+%----------------------------------------------
+%   Dedication
+%----------------------------------------------
+
+$if(thesis.dedication)$
+
+\vspace*{\baselineskip}
+
+\normalsize{$thesis.dedication$}
+\newpage
+\afterpage{\blankpage}
+$endif$
+
+\pagenumbering{Roman} 
+
+%----------------------------------------------
+%   Acknowledgement
+%----------------------------------------------
+
+
+$if(thesis.acknowledgements)$
+\chapter{\sffamily Acknowledgements}
+
+\vspace*{\baselineskip}
+
+\normalsize{$thesis.acknowledgements$}
+\newpage
+\afterpage{\blankpage}
+$endif$
+
+%----------------------------------------------
+%   Abstract (English)
+%----------------------------------------------
+
+$if(thesis.abstract-english)$
+\chapter{\sffamily Abstract}
+
+\vspace*{\baselineskip}
+
+\normalsize{$thesis.abstract-english$}
+\vspace*{\baselineskip}
+$endif$
+
+%----------------------------------------------
+%   Abstract (Catalan)
+%----------------------------------------------
+
+$if(thesis.abstract-catalan)$
+\chapter{\sffamily Resum}
+
+\vspace*{\baselineskip}
+
+\normalsize{$thesis.abstract-catalan$}
+\vspace*{\baselineskip}
+\newpage
+\afterpage{\blankpage}
+$endif$
+
+

@@ -170,40 +170,35 @@
 
 % page style headings has to be different for two-sided printing than for one-sided printing
 % define headings page stle (\ps@foo), for odd and even pages
-\if@twoside
-  \def\ps@headings{%
-      \let\@oddfoot\@empty\let\@evenfoot\@empty
-      \def\@evenhead{\thepage\hfil\slshape\leftmark}%
-      \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
-      \let\@mkboth\markboth
-    \def\chaptermark##1{%
-      \markboth {\MakeUppercase{%
-        \ifnum \c@secnumdepth >\m@ne
-          \if@mainmatter
-            \@chapapp\ \thechapter. \ %
-          \fi
+\def\ps@headings{%
+    % the running feet are empty in this page style, the running head contains the page number and one of the marks.
+    \let\@oddfoot\@empty\let\@evenfoot\@empty % running foot (empty)
+    \def\@evenhead{\thepage\hfil\slshape\leftmark} % running head
+    \def\@oddhead{{\slshape\rightmark}\hfil\thepage} % running head
+    \let\@mkboth\markboth % When using this page style, the contents of the running head is determined by the chapter and section titles
+
+    % \chaptermark{} is called by \chapter to set a mark
+  % use the \chaptermark and \sectionmark macros to fill the running heads
+  \def\chaptermark##1{% ##1 will be defined on execution
+    % define left chapter mark, but leave right chapter mark empty
+    \markboth {\MakeUppercase{
+      \ifnum \c@secnumdepth >\m@ne
+         \if@mainmatter
+          \@chapapp\ \thechapter. \ %
         \fi
-        ##1}}{}}%
-    \def\sectionmark##1{%
-      \markright {\MakeUppercase{%
-        \ifnum \c@secnumdepth >\z@
-          \thesection. \ %
-        \fi
-        ##1}}}}
-\else
-  \def\ps@headings{%
-    \let\@oddfoot\@empty
-    \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
-    \let\@mkboth\markboth
-    \def\chaptermark##1{%
-      \markright {\MakeUppercase{%
-        \ifnum \c@secnumdepth >\m@ne
-          \if@mainmatter
-            \@chapapp\ \thechapter. \ %
-          \fi
-        \fi
-        ##1}}}}
-\fi
+      \fi
+      ##1}}{}}%
+  % \sectionmark{} is called by \section to set a mark
+  \def\sectionmark##1{%
+    % define only right mark
+    \markright {\MakeUppercase{%
+      \ifnum \c@secnumdepth >\z@
+        \thesection. \ %
+      \fi
+      ##1}
+    }
+  }
+} % end of headings configuration for two-sided printing
 
 % define headings (again?), but now indonditionally to one- or two-sided printing
 % [The definition of the page style myheadings is fairly simple because the user determines the contents of the running head himself by using the \markboth and \markright commands.]
@@ -222,74 +217,31 @@
   \let\footnoterule\relax
   \let \footnote \thanks
   \null\vfil
-%  \vskip 60\p@
   \begin{flushleft}%
     {\LARGE \sffamily \@title \par}%
     \vspace*{2cm}
     {\Large \sffamily \@subtitle \par}%
     \vskip 2cm%
-    {\large
-     \lineskip .75em%
-      \begin{tabular}[t]{c}%
-       {\Huge  \@author}
-      \end{tabular}\par}%
-      \rule{\linewidth}{1mm} \par
-      \vskip 1cm%
-    {\large TESI DOCTORAL UPF / Year \@thyear}\\[2cm]
+    {\large \lineskip .75em \begin{tabular}[t]{c} {\Huge  \@author} \end{tabular}\par}
+    \rule{\linewidth}{1mm} \par
+    \vskip 1cm%
+    {\large TESI DOCTORAL UPF / year \@thyear}\\[2cm]
     {\normalsize THESIS SUPERVISOR}\par
     {\large \@supervisor}\par
     {\large Department \@department} \par
     \vspace{2cm}
-   \centering  
+   \centering
     \includegraphics[scale=0.4]{logo_upf.png}
    \end{flushleft}\par
-%  \@thanks
-% \vfil\null
   \end{titlepage}%
+
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
   \global\let\maketitle\relax
   \global\let\@thanks\@empty
-  \global\let\@author\@empty
   \global\let\@date\@empty
   \global\let\@title\@empty
-  %
-  \global\let\s@ubtitle\@empty 
-  %
-  \global\let\title\relax
-  \global\let\author\relax
-  \global\let\date\relax
-  \global\let\and\relax
-}
-\else
-\newcommand\maketitle{\par
-  \begingroup
-    \renewcommand\thefootnote{\@fnsymbol\c@footnote}%
-    \def\@makefnmark{\rlap{\@textsuperscript{\normalfont\@thefnmark}}}%
-    \long\def\@makefntext##1{\parindent 1em\noindent
-            \hb@xt@1.8em{%
-                \hss\@textsuperscript{\normalfont\@thefnmark}}##1}%
-    \if@twocolumn
-      \ifnum \col@number=\@ne
-        \@maketitle
-      \else
-        \twocolumn[\@maketitle]%
-      \fi
-    \else
-      \newpage
-      \global\@topnum\z@   % Prevents figures from going at top of page.
-      \@maketitle
-    \fi
-    \thispagestyle{plain}\@thanks
-  \endgroup
-  \setcounter{footnote}{0}%
-  \global\let\thanks\relax
-  \global\let\maketitle\relax
-  \global\let\@maketitle\relax
-  \global\let\@thanks\@empty
-  \global\let\@author\@empty
-  \global\let\@date\@empty
-  \global\let\@title\@empty
+  \global\let\s@ubtitle\@empty
   \global\let\title\relax
   \global\let\author\relax
   \global\let\date\relax
@@ -314,11 +266,12 @@
     {\large \@date}%
   \end{center}%
   \par
-  \vskip 1.5em
-  }
+  \vskip 1.5em}
 \fi
 
-\newcommand*\chaptermark[1]{}
+
+\newcommand*\chaptermark[1]{} % default initializations of \...mark commands
+
 \setcounter{secnumdepth}{2}
 \newcounter {part}
 \newcounter {chapter}
@@ -327,14 +280,18 @@
 \newcounter {subsubsection}[subsection]
 \newcounter {paragraph}[subsubsection]
 \newcounter {subparagraph}[paragraph]
-\renewcommand \thepart {\@Roman\c@part}
-\renewcommand \thechapter {\@arabic\c@chapter}
-\renewcommand \thesection {\thechapter.\@arabic\c@section}
-\renewcommand\thesubsection   {\thesection.\@arabic\c@subsection}
-\renewcommand\thesubsubsection{\thesubsection .\@arabic\c@subsubsection}
-\renewcommand\theparagraph    {\thesubsubsection.\@arabic\c@paragraph}
-\renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph}
-\newcommand\@chapapp{\chaptername}
+
+% for any counter CTR, \theCTR is a macro that defines the printed version of counter CTR
+\renewcommand \thepart {\@Roman\c@part} % parts in Roman numerals
+\renewcommand \thechapter {\@arabic\c@chapter} % chapters in Arabic numerals
+\renewcommand \thesection {\thechapter.\@arabic\c@section} % sections in Arabic numerals
+\renewcommand\thesubsection   {\thesection.\@arabic\c@subsection} % subsections in Arabic numerals
+\renewcommand\thesubsubsection{\thesubsection .\@arabic\c@subsubsection} % csubsubsections in Arabic numerals
+\renewcommand\theparagraph    {\thesubsubsection.\@arabic\c@paragraph} % paragraphs in Arabic numerals
+\renewcommand\thesubparagraph {\theparagraph.\@arabic\c@subparagraph} % subparagraphs in Arabic numerals
+
+% chapter name
+\newcommand\@chapapp{\chaptername} 
 
 % to remove page numbers from blank pages
 \let\origdoublepage\cleardoublepage
@@ -353,7 +310,8 @@
 % clear the page, start arabic page numbering and turn on chapter numbering
 \newcommand\mainmatter{%
   \@mainmattertrue
-  \pagenumbering{arabic}}
+  \pagenumbering{arabic}
+  }
 
 % clear the page, turn off chapter numbering and leave page numbering unchanged
 \newcommand\backmatter{
@@ -406,79 +364,37 @@
   \fi
 }
 
-% \@chapter is called when we have a numbered chapter
-\def\@part[#1]#2{%
-  \ifnum \c@secnumdepth >-2\relax
-    \refstepcounter{part}%
-    \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
-  \else
-    \addcontentsline{toc}{part}{#1}%
-  \fi
-  \markboth{}{}%
-  {\centering
-   \interlinepenalty \@M
-   \normalfont
-   \ifnum \c@secnumdepth >-2\relax
-     \huge\bfseries \partname\nobreakspace\thepart
-     \par
-     \vskip 20\p@
-   \fi
-   \Huge \bfseries #2\par}%
-  \@endpart
-}
-
-\def\@spart#1{%
-    {
-      \centering
-      \interlinepenalty \@M
-      \normalfont
-      \Huge \bfseries #1\par
-    }%
-    \@endpart
-}
-
-\def\@endpart{
-  \vfil\newpage
-  \if@twoside
-    \if@openright
-      \null
-      \thispagestyle{empty}%
-      \newpage
-    \fi
-  \fi
-  \if@tempswa \twocolumn \fi
-}
-
 % a chapter should always start on a new page therefore we start by calling \clearpage and setting the pagestyle for this page to plain.
 \newcommand\chapter{
-  \if@openright\cleardoublepage\else\clearpage\fi
+  \if@openright\clearpage\else\clearpage\fi
   \thispagestyle{plain}%
   \global\@topnum\z@
   \@afterindentfalse
   \secdef\@chapter\@schapter
 }
 
+% \@chapter is called when we have a numbered chapter
 \def\@chapter[#1]#2{
   \ifnum \c@secnumdepth >\m@ne
     \if@mainmatter
-      \refstepcounter{chapter}%
-      \typeout{\@chapapp\space\thechapter.}%
-      \addcontentsline{toc}{chapter}%
-      {\protect\numberline{\thechapter}{\MakeUppercase{ #1}}}%
-    \else
-      \addcontentsline{toc}{chapter}{\MakeUppercase{ #1}}%
-    \fi
+    \refstepcounter{chapter}%
+    \typeout{\@chapapp\space\thechapter.}%
+    \addcontentsline{toc}{chapter}%
+    {\protect\numberline{\thechapter}{}}%
   \else
-    \addcontentsline{toc}{chapter}{\MakeUppercase{ #1}}%
+    \addcontentsline{toc}{chapter}{}%
   \fi
-  \chaptermark{\MakeUppercase{#1}}%
+  \else
+    \addcontentsline{toc}{chapter}{}%
+  \fi
+  \chaptermark{}%
   \addtocontents{lof}{\protect\addvspace{10\p@}}%
   \addtocontents{lot}{\protect\addvspace{10\p@}}%
   \if@twocolumn
     \@topnewpage[\@makechapterhead{#2}]%
   \else
-    \@makechapterhead{#2}%
-    \@afterheading
+  \@makechapterhead{#2}%
+  \@afterheading
   \fi
 }
 
@@ -494,7 +410,7 @@
       \fi
     \fi
     \interlinepenalty\@M
-    \Huge \bfseries \MakeUppercase{ #1}\par\nobreak
+    \Large \bfseries \sf \scshape{ #1}\par\nobreak % section titles
     \vskip 40\p@
   }
 }
@@ -754,12 +670,13 @@
 \DeclareRobustCommand*\cal{\@fontswitch\relax\mathcal}
 \DeclareRobustCommand*\mit{\@fontswitch\relax\mathnormal}
 
-\newcommand\@pnumwidth{1.55em}
-\newcommand\@tocrmarg{2.55em}
-\newcommand\@dotsep{4.5}
+% cross referencing
+\newcommand\@pnumwidth{1.55em} % the width of a box in which the page number is put
+\newcommand\@tocrmarg{2.55em} % the right margin for multiple line entries
+\newcommand\@dotsep{4.5} % separation between dots, in mu units
 \setcounter{tocdepth}{2}
 
-% table of contents
+\setcounter{tocdepth}{2}
 \newcommand\tableofcontents{%
     \if@twocolumn
       \@restonecoltrue\onecolumn
@@ -772,8 +689,7 @@
     \@starttoc{toc}%
     \if@restonecol\twocolumn\fi
     }
-
-% for parts
+    
 \newcommand*\l@part[2]{%
   \ifnum \c@tocdepth >-2\relax
     \addpenalty{-\@highpenalty}%
@@ -790,7 +706,8 @@
     \endgroup
   \fi}
 
-  % for chapters
+
+% for chapters
 \newcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne
     \addpenalty{-\@highpenalty}%
@@ -805,7 +722,8 @@
       #1\nobreak\hfil \nobreak\hb@xt@\@pnumwidth{\hss #2}\par
       \penalty\@highpenalty
     \endgroup
-  \fi}
+  \fi
+}
 
 \newcommand*\l@section{\@dottedtocline{1}{1.5em}{2.3em}}
 \newcommand*\l@subsection{\@dottedtocline{2}{3.8em}{3.2em}}
@@ -846,7 +764,6 @@
 
 \let\l@table\l@figure
 
-
 % bibliography
 % the "open" bibliography format uses an indentation of \bibindent.
 \newdimen\bibindent
@@ -858,25 +775,21 @@
 \setlength{\csllabelwidth}{3em}
 \newlength{\cslentryspacingunit} % times entry-spacing
 \setlength{\cslentryspacingunit}{\parskip}
-
 \newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
+  {\chapter*{\bibname}%
+  \setlength{\parindent}{0pt} % don't indent paragraphs
+   \ifodd #1 % turn on hanging indent if param 1 is 1
+     \let\oldpar\par
+     \def\par{\hangindent=\cslhangindent\oldpar}
+   \fi
+   \setlength{\parskip}{#2\cslentryspacingunit} % set entry spacing
+   }%
  {}
 \usepackage{calc}
 \newcommand{\CSLBlock}[1]{#1\hfill\break}
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-
 
 \newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
 \let\@openbib@code\@empty
@@ -920,10 +833,10 @@
 }
 
 % initialization
-\newcommand\contentsname{Contents}
+\newcommand\contentsname{$toc-title$}
 \newcommand\listfigurename{List of Figures}
 \newcommand\listtablename{List of Tables}
-\newcommand\bibname{Bibliography}
+\newcommand\bibname{bibliography}
 \newcommand\indexname{Index}
 \newcommand\figurename{Figure}
 \newcommand\tablename{Table}

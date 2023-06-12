@@ -1,4 +1,6 @@
-# Discussion
+---
+title: Discussion
+---
 
 Aliquam at massa turpis. Donec ac aliquet ligula. Integer eget magna mauris. Vestibulum venenatis ac risus eu ultrices. Suspendisse fringilla vestibulum blandit. Integer hendrerit fermentum ante, molestie consequat risus faucibus nec. Donec pellentesque condimentum bibendum. Cras suscipit ut elit in ullamcorper. Phasellus egestas arcu quis mi posuere, vitae commodo lorem mattis. Nulla a risus nec ligula finibus facilisis. In lorem mauris, pretium at libero et, hendrerit ornare orci. Aliquam sed odio vel lacus ullamcorper vehicula eget nec purus.
 

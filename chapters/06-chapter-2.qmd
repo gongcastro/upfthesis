@@ -1,4 +1,6 @@
-# The second chapter
+---
+title: The second chapter
+---
 
 Sed eleifend congue aliquam. Aenean risus tellus, tincidunt at venenatis id, maximus feugiat nunc. Phasellus tellus enim, euismod auctor nisi at, blandit aliquam ligula. Donec auctor dignissim eros. Etiam et enim diam. Aenean eget tellus sodales, laoreet risus at, imperdiet mauris. Cras nulla nulla, vehicula id accumsan vitae, malesuada at neque. Curabitur suscipit risus at sodales sagittis. Nam molestie sapien tincidunt placerat semper. Vestibulum ut eleifend urna, at aliquet quam.
 
@@ -11,6 +13,8 @@ mtcars |>
     gt()
 ```
 
+## You guessed it, a section
+
 Integer dui odio, fringilla sit amet consequat a, accumsan ut eros. Sed mauris risus, laoreet sit amet nunc id, ornare sagittis odio. Suspendisse elementum laoreet condimentum. Sed molestie mauris diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent blandit at nisl imperdiet sagittis. In at metus sem. Aliquam ultricies fermentum risus, malesuada auctor nisi elementum quis. Nulla facilisis aliquet lacus, non aliquam justo volutpat vitae.
 
-Phasellus vitae nisl purus. Nullam sed odio elit. Maecenas gravida convallis faucibus. Nulla pellentesque, nulla ut efficitur commodo, tortor nulla aliquet leo, ut commodo enim magna sit amet erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec euismod eros eu rhoncus mollis. Fusce id enim in sem sodales tempor eu quis dolor. Nulla sed elit eget ex blandit consequat ac tincidunt quam. Mauris ac sem eget nibh convallis venenatis. Ut ullamcorper egestas condimentum. Suspendisse ut pharetra neque. Donec scelerisque at odio et congue. Sed quis turpis at velit vestibulum sollicitudin eu ut elit. Suspendisse placerat hendrerit rutrum. Praesent accumsan ligula nec eleifend dapibus.
+Phasellus vitae nisl purus. Nullam sed odio elit. Maecenas gravida convallis faucibus. Nulla pellentesque, nulla ut efficitur commodo, tortor nulla aliquet leo, ut commodo enim magna sit amet erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Donec euismod eros eu rhoncus mollis. Fusce id enim in sem sodales tempor eu quis dolor. Nulla sed elit eget ex blandit consequat ac tincidunt quam^[A footnote!].Mauris ac sem eget nibh convallis venenatis. Ut ullamcorper egestas condimentum. Suspendisse ut pharetra neque. Donec scelerisque at odio et congue. Sed quis turpis at velit vestibulum sollicitudin eu ut elit. Suspendisse placerat hendrerit rutrum. Praesent accumsan ligula nec eleifend dapibus.

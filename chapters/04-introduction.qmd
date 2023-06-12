@@ -1,12 +1,18 @@
-# Introduction
+---
+title: Introduction
+---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis condimentum lorem. Morbi in metus molestie, gravida lectus eu, rhoncus arcu. Proin lobortis ullamcorper massa quis volutpat. Pellentesque sollicitudin, sem vel porta volutpat, ante purus rutrum magna, sed placerat magna arcu ut metus. Nulla facilisi. Proin quis lorem tempor, rutrum sapien ut, egestas nisl. Nunc lacus lacus, aliquet sed felis sit amet, fringilla scelerisque turpis. Fusce semper felis et turpis laoreet mollis. Duis ullamcorper nisi sem, id sagittis arcu bibendum ac. Quisque semper nulla a sem placerat suscipit. Aenean vel massa nec erat blandit accumsan et non felis. Suspendisse nec bibendum ipsum. Fusce eu nibh convallis, rutrum sapien nec, feugiat ante [@bolliger2009full; @wickham2019welcome].
+
+## A first section
 
 Fusce facilisis est tortor, id iaculis dolor rutrum ac. Curabitur id bibendum lacus, eget lacinia velit. Fusce suscipit tempus nibh convallis tempor. Aenean ullamcorper, orci et semper sodales, orci elit rutrum quam, eget lobortis leo felis in dui. Morbi et odio aliquet ligula suscipit molestie nec quis libero. Proin tempus gravida neque non faucibus. Donec hendrerit molestie elit sed congue. Donec faucibus mollis accumsan. Fusce vestibulum porttitor dui eu facilisis. Aliquam rutrum erat tortor, eu gravida nisi cursus quis. Nullam dignissim luctus turpis non ullamcorper. Integer eleifend molestie est, facilisis suscipit diam. Nullam in justo nisl.
 
 Phasellus vitae tortor eros. Nam eu eros id erat interdum blandit vitae eu libero. Cras eget dictum eros, id condimentum tellus. Ut sed diam tristique, aliquam urna eget, auctor tortor. Vestibulum gravida urna in consectetur volutpat. Maecenas id nisi quis neque dictum ultrices nec quis tellus. Pellentesque dictum aliquam enim, id efficitur mi vulputate sit amet. In nec aliquam justo, nec elementum leo.
 
 Sed luctus sit amet diam ac sollicitudin. Suspendisse porttitor augue elit, ac interdum sapien congue et. Maecenas ut eleifend ex. Phasellus non felis porttitor, suscipit est non, vulputate eros. Fusce nec mollis justo. Phasellus non maximus lectus. Integer et lorem mollis, hendrerit magna at, sagittis purus.
+
+## A second section
 
 Suspendisse maximus mauris in pretium convallis. Cras nec egestas purus. Suspendisse sodales nisl a nulla varius, vel molestie neque convallis. Cras aliquam malesuada lectus et rhoncus. Suspendisse aliquam pretium viverra. Aenean sed lobortis nulla. Ut diam dui, efficitur ac eleifend ornare, porttitor eget nibh. Quisque euismod quam risus, sit amet aliquam mauris mollis in.
 

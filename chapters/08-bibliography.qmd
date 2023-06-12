@@ -1,4 +1,6 @@
-# Bibliography
+---
+title: Bibliography {-}
+---
 
 ::: {#refs}
 :::

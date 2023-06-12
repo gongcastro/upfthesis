@@ -11,21 +11,25 @@ contributes:
     common:
       toc: true
     pdf:
-      template: template.tex    
+      #template: template.tex    
       template-partials:
-        - partials/pandoc.tex
+        #- partials/pandoc.tex
+        - partials/before-body.tex
         - partials/title.tex
-        - partials/toc.tex
-        - partials/biblio.tex
+        #- partials/toc.tex
+        #- partials/biblio.tex
       format-resources:
-        - upfthesis.cls
+        #- upfthesis.cls
         - logo_upf.png
+      include-in-header: include-in-header.tex
       pdf-engine: pdflatex
-      papersize: B5
+      papersize: b5paper
       fontsize: 12pt
       classoption: [twoside]
       biblio-title: Bibliography
       toc: true
+      lof: true
+      lot: true
     docx:
       #template: templates/reference.docx
       reference-doc: templates/reference.docx

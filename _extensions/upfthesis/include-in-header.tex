@@ -1,0 +1,21 @@
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{times}
+\usepackage{makeidx}
+\usepackage[b5paper]{geometry}
+\usepackage[cam, noinfo, a4, center]{crop} % cam for corner marks, frame for frame
+\usepackage{bookmark}
+\usepackage{booktabs}
+
+% to remove blank pages
+\usepackage{atbegshi} % http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
+
+% to add blank pages
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}

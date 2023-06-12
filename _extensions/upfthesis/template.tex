@@ -1,18 +1,10 @@
-\documentclass[12pt, b5paper,twoside]{upfthesis}
-
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{longtable}
-\usepackage{times}
-\usepackage{makeidx}
-\usepackage[b5paper]{geometry}
-\usepackage[$page-crop$, $page-info$, a4, center]{crop} % cam for corner marks, frame for frame
-\usepackage{bookmark}
-\usepackage{booktabs}
 
 % for bibliography
 %\usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
 %\addbibresource{$bibliography$}
+
+\clearpage\maketitle
+\thispagestyle{empty}
 
 % WITHOUT HEADINGS: NO MODIFICATION
 \pagestyle{plain}
@@ -24,25 +16,16 @@
 %\bibliographystyle{apalike}
 
 %ADD YOUR DATA
-$title.tex()$
-
 \begin{document}
 
 \frontmatter
 
 \maketitle
 
-%TABLE OF CONTENTS: REQUIRED
-$toc.tex()$
-
 $body$
 
 \backmatter
 
-\printindex
-
 \clearpage
-
-$biblio.tex()$
 
 \end{document}
