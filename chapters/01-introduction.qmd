@@ -1,5 +1,6 @@
 ---
 title: Introduction
+number-sections: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer quis condimentum lorem. Morbi in metus molestie, gravida lectus eu, rhoncus arcu. Proin lobortis ullamcorper massa quis volutpat. Pellentesque sollicitudin, sem vel porta volutpat, ante purus rutrum magna, sed placerat magna arcu ut metus. Nulla facilisi. Proin quis lorem tempor, rutrum sapien ut, egestas nisl. Nunc lacus lacus, aliquet sed felis sit amet, fringilla scelerisque turpis. Fusce semper felis et turpis laoreet mollis. Duis ullamcorper nisi sem, id sagittis arcu bibendum ac. Quisque semper nulla a sem placerat suscipit. Aenean vel massa nec erat blandit accumsan et non felis. Suspendisse nec bibendum ipsum. Fusce eu nibh convallis, rutrum sapien nec, feugiat ante [@bolliger2009full; @wickham2019welcome].

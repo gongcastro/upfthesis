@@ -10,6 +10,13 @@ Phasellus ultricies rhoncus massa quis dignissim. Praesent pretium, augue eget i
 
 Ut eu fermentum risus, quis laoreet nisl. Vestibulum feugiat blandit lectus nec blandit. Mauris interdum sem id nunc interdum facilisis. Fusce commodo, purus sed gravida pretium, risus mi volutpat enim, viverra posuere augue enim at velit. Fusce sollicitudin ipsum laoreet imperdiet tempor. Vestibulum vel dapibus est. Nulla vitae quam congue, porttitor odio vel, iaculis est. Vestibulum tortor massa, feugiat quis nunc sed, scelerisque rhoncus dui. Ut non ultrices ligula, vestibulum faucibus tellus. Sed eu arcu hendrerit, scelerisque mauris vel, commodo justo.
 
+```r
+# this is some R code
+a <- 1
+b <- 2
+a + b
+```
+
 ## Yes, another section
 
 Duis eros felis, vestibulum non erat vel, tempor finibus justo. Aliquam vehicula nisl a dolor interdum aliquet. Fusce maximus dui pellentesque lorem posuere, id ullamcorper lacus posuere. Sed vel nisl mauris. Donec eu dignissim urna, id accumsan ipsum. Pellentesque facilisis a justo nec tempor. Integer sit amet nibh iaculis nisi viverra porta. In viverra elit eget tincidunt placerat. Cras dolor diam, porta eget purus at, commodo elementum sem. Aliquam nec semper leo.

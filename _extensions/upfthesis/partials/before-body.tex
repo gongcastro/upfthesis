@@ -49,12 +49,12 @@ $endif$
 
 
 $if(thesis.acknowledgements)$
-\chapter{\sffamily Acknowledgements}
+\chapter*{\sffamily Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
 
 \vspace*{\baselineskip}
 
 \normalsize{$thesis.acknowledgements$}
-\newpage
 \afterpage{\blankpage}
 $endif$
 
@@ -63,7 +63,8 @@ $endif$
 %----------------------------------------------
 
 $if(thesis.abstract-english)$
-\chapter{\sffamily Abstract}
+\section*{\sffamily Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
 
 \vspace*{\baselineskip}
 
@@ -76,14 +77,24 @@ $endif$
 %----------------------------------------------
 
 $if(thesis.abstract-catalan)$
-\chapter{\sffamily Resum}
+\section*{\sffamily Resum}
 
 \vspace*{\baselineskip}
 
 \normalsize{$thesis.abstract-catalan$}
-\vspace*{\baselineskip}
-\newpage
 \afterpage{\blankpage}
 $endif$
 
+%----------------------------------------------
+%   Preface
+%----------------------------------------------
+
+$if(thesis.preface)$
+\chapter*{\sffamily Preface}
+
+\vspace*{\baselineskip}
+
+\normalsize{$thesis.preface$}
+\afterpage{\blankpage}
+$endif$
 

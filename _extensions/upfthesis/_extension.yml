@@ -11,17 +11,16 @@ contributes:
     common:
       toc: true
     pdf:
-      #template: template.tex    
-      template-partials:
-        #- partials/pandoc.tex
-        - partials/before-body.tex
-        - partials/title.tex
-        #- partials/toc.tex
-        #- partials/biblio.tex
-      format-resources:
-        #- upfthesis.cls
-        - logo_upf.png
       include-in-header: include-in-header.tex
+      #include-after-body: include-after-body.tex
+      include-after:
+      template-partials:
+        - partials/before-body.tex
+        - partials/toc.tex
+        - partials/after-body.tex
+      format-resources:
+        - logo_upf.png
+
       pdf-engine: pdflatex
       papersize: b5paper
       fontsize: 12pt
@@ -30,6 +29,9 @@ contributes:
       toc: true
       lof: true
       lot: true
+      code-block-border-left: "#cc0033"
+      code-block-bg: "#faf8f7"
+      title-meta: "Thesis"
     docx:
       #template: templates/reference.docx
       reference-doc: templates/reference.docx
