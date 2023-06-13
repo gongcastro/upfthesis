@@ -17,10 +17,10 @@ This Quarto extension provides a template and format for doctoral dissertations 
 
 For now, only the PDF output in B5 (recommended by UPF) is available. If you want to contribute extending this template and formatting to Microsoft Word and Open Document output formats, do not hesitate to contact me, aor to open an issue or pull request. Any other contributions are also welcome! :rocket:
 
->:bulb: this template does not generate the *cover* of the book. You must request it separately [opening a CAU](https://guiesbibtic.upf.edu/tesis/eng/cover)
+>:bulb: This template does not generate the *cover* of the book. You must request it separately [opening a CAU](https://guiesbibtic.upf.edu/tesis/eng/cover)
 
 
-## Installing :arrowdown:
+## Installing :arrow_down:
 
 ```bash
 quarto use template gongcastro/upfthesis
@@ -28,13 +28,13 @@ quarto use template gongcastro/upfthesis
 
 This will install the extension and create an set up the structure of the project. If you are used to working from RStudio, I recommend you create a new project in this same folder.
 
-## Template structure
+## Template structure :file_folder:
 
 The downloaded directory contains several sub-directories and files:
 
-* **_thesis**: contains the rendered thesis dissertation in whichever formats you have specified (e.g., [thesis.pdf](_thesis/thesis.pdf), [thesis.docx](_thesis/thesis.docx))
+* [**_thesis**](_thesis/): contains the rendered thesis dissertation in whichever formats you have specified (e.g., [thesis.pdf](_thesis/thesis.pdf), [thesis.docx](_thesis/thesis.docx))
 * [**_quarto.yml**](_quarto.yml): this is a YAML file with the global settings of the thesis. Here you can change the title, authors, department, etc. You can change most settings as indicated in the [Book Options](https://quarto.org/docs/reference/projects/books.html) section of the Quarto reference. Some of these settings are internally set in the [_extension.yml](_extensions/gongcastro/upfthesis/_extension.yml) file; feel free to change them if you know what you are doing. 
-* **chapters/** contains the Quarto (`.qmd`) files with the body of the thesis. Each section embedded in a different file. The chapters included are based on the [Theses: Parts and content](https://guiesbibtic.upf.edu/tesis/eng/parts) section of the [Guies BibTIC UPF](https://guiesbibtic.upf.edu/tesis/eng/parts) website. Some of these sections might not be required. If so, you may keep them from being included in the rendered output by removing them from the [**_quarto.yml**](_quarto.yml) file (`chapters:`) section. For example, here I am commenting out the *Glossary* section, which is not required:
+* [**chapters/**](chapters/) contains the Quarto (`.qmd`) files with the body of the thesis. Each section embedded in a different file. The chapters included are based on the [Theses: Parts and content](https://guiesbibtic.upf.edu/tesis/eng/parts) section of the [Guies BibTIC UPF](https://guiesbibtic.upf.edu/tesis/eng/parts) website. Some of these sections might not be required. If so, you may keep them from being included in the rendered output by removing them from the [**_quarto.yml**](_quarto.yml) file (`chapters:`) section. For example, here I am commenting out the *Glossary* section, which is not required:
 
 ```yaml
 chapters:
@@ -64,8 +64,7 @@ bibliography:
 * [.gitignore](.gitignore): if you are a Git users, you might find this file convenient to avoid committing unwanted documents to your Git history.
 * [apa.csl](apa.csl) contains the code necessary to format the citations and bibliography in APA style. You may replace this file by whichever other style you find convenient by replacing [apa.csl](apa.csl) with the corresponding file from the [citation-style-language](https://github.com/citation-style-language/styles/blob/master/apa.csl) repository. Remember to change the path in [**_quarto.yml**](_quarto.yml) if necessary.
 
-
-## Using
+## Using :rocket:
 
 To render your dissertation to a PDF, you can use the Quarto command line in your console (Command Prompt/Power Shell in Windows, Terminal in MacOS, and command line in Linux):
 
@@ -94,4 +93,4 @@ format:
   upfthesis-pdf: default
 ```
 
-
+See a rendered example here: [https://github.com/gongcastro/upfthesis/_thesis/thesis.pdf](https://github.com/gongcastro/upfthesis/_thesis/thesis.pdf)
