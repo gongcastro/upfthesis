@@ -1,0 +1,12 @@
+---
+title: Glossary {-}
+---
+
+Some term
+: The definition of this term
+
+Another term
+: The definition of this other term
+
+Get it?
+: Another term with its corresponding definitions

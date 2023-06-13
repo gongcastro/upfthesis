@@ -16,11 +16,8 @@ contributes:
         - include-in-header.tex
       template-partials:
         - partials/before-body.tex
-        - partials/toc.tex
-        - partials/after-body.tex
       format-resources:
-        - logo_upf.png
-
+        - logo.png
       pdf-engine: pdflatex
       papersize: b5paper
       fontsize: 12pt
