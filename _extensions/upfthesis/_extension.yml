@@ -10,12 +10,15 @@ contributes:
   formats:
     common:
       toc: true
+      logo: logo.png
     pdf:
       embed-resources: true
       include-in-header:
         - include-in-header.tex
       template-partials:
         - partials/before-body.tex
+        - partials/toc.tex
+        - partials/after-body.tex
       format-resources:
         - logo.png
       pdf-engine: pdflatex
