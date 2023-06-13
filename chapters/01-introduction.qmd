@@ -13,11 +13,20 @@ Phasellus vitae tortor eros. Nam eu eros id erat interdum blandit vitae eu liber
 
 Sed luctus sit amet diam ac sollicitudin. Suspendisse porttitor augue elit, ac interdum sapien congue et. Maecenas ut eleifend ex. Phasellus non felis porttitor, suscipit est non, vulputate eros. Fusce nec mollis justo. Phasellus non maximus lectus. Integer et lorem mollis, hendrerit magna at, sagittis purus.
 
+```{mermaid}
+%%| fig-width: 4
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
 ## A second section
 
 Suspendisse maximus mauris in pretium convallis. Cras nec egestas purus. Suspendisse sodales nisl a nulla varius, vel molestie neque convallis. Cras aliquam malesuada lectus et rhoncus. Suspendisse aliquam pretium viverra. Aenean sed lobortis nulla. Ut diam dui, efficitur ac eleifend ornare, porttitor eget nibh. Quisque euismod quam risus, sit amet aliquam mauris mollis in.
 
-Curabitur dictum ultrices pulvinar. In id velit vel arcu aliquam commodo. Quisque eu odio vitae sapien molestie dapibus ut at sapien. In ac dolor ut neque viverra scelerisque eu in nibh. Quisque ac ex libero. Praesent posuere sodales enim. Suspendisse lobortis, justo ut vehicula dapibus, dui libero sodales quam, laoreet mattis mauris urna tempus diam. Maecenas rhoncus lorem ac finibus interdum. Praesent egestas mi at tempor pellentesque. Pellentesque faucibus hendrerit odio eget semper. Proin ultricies libero vitae ligula congue tempor.
+Curabitur dictum ultrices pulvinar. In id velit vel arcu aliquam commodo. Quisque eu odio vitae sapien molestie dapibus ut at sapien. In ac dolor ut neque viverra scelerisque eu in nibh. Quisque ac ex libero. Praesent posuere sodales enim. Suspendisse lobortis, justo ut vehicula dapibus, dui libero sodales quam, laoreet mattis mauris urna tempus diam. Maecenas rhoncus lorem ac finibus interdum. Praesent egestas mi at tempor pellentesque. Pellentesque faucibus hendrerit odio eget semper. Proin ultricies libero vitae ligula congue tempor (see @fig-1).
 
 ```{r fig-1}
 #| fig-cap: "This is Figure 1, which I made using ggplot2"

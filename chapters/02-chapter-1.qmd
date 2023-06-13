@@ -2,7 +2,7 @@
 title: The first chapter
 ---
 
-Phasellus ultricies rhoncus massa quis dignissim. Praesent pretium, augue eget iaculis posuere, sem felis cursus orci, at rutrum neque risus ut sapien. Curabitur in est id neque lacinia fringilla in sit amet felis. Nunc suscipit est quis neque posuere, laoreet sodales risus luctus. Vestibulum ultricies interdum dictum. Maecenas sit amet nisi diam. Aenean enim sapien, vestibulum eget suscipit accumsan, malesuada id ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas accumsan magna vel velit egestas feugiat. Fusce sed arcu at sapien feugiat porttitor in et sem. Phasellus fringilla ornare ipsum. Maecenas eleifend felis quis fringilla tincidunt. Sed auctor, dui eu viverra gravida, urna elit semper lorem, in gravida lacus metus ut erat. Nam vitae imperdiet lacus.
+Phasellus ultricies rhoncus massa quis dignissim. Praesent pretium, augue eget iaculis posuere, sem felis cursus orci, at rutrum neque risus ut sapien. Curabitur in est id neque lacinia fringilla in sit amet felis. Nunc suscipit est quis neque posuere, laoreet sodales risus luctus. Vestibulum ultricies interdum dictum. Maecenas sit amet nisi diam. Aenean enim sapien, vestibulum eget suscipit accumsan, malesuada id ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas accumsan magna vel velit egestas feugiat. Fusce sed arcu at sapien feugiat porttitor in et sem. Phasellus fringilla ornare ipsum. Maecenas eleifend felis quis fringilla tincidunt. Sed auctor, dui eu viverra gravida, urna elit semper lorem, in gravida lacus metus ut erat. Nam vitae imperdiet lacus (see @fig-cudillero).
 
 ![A picture of Cudillero, a village in my home Asturias (Spain)](../img/cudillero.jpg){#fig-cudillero width=350 height=300}
 
@@ -19,11 +19,17 @@ a + b
 
 ## Yes, another section
 
-Duis eros felis, vestibulum non erat vel, tempor finibus justo. Aliquam vehicula nisl a dolor interdum aliquet. Fusce maximus dui pellentesque lorem posuere, id ullamcorper lacus posuere. Sed vel nisl mauris. Donec eu dignissim urna, id accumsan ipsum. Pellentesque facilisis a justo nec tempor. Integer sit amet nibh iaculis nisi viverra porta. In viverra elit eget tincidunt placerat. Cras dolor diam, porta eget purus at, commodo elementum sem. Aliquam nec semper leo.
+Duis eros felis, vestibulum non erat vel, tempor finibus justo. Aliquam vehicula nisl a dolor interdum aliquet. Fusce maximus dui pellentesque lorem posuere, id ullamcorper lacus posuere. Sed vel nisl mauris. Donec eu dignissim urna, id accumsan ipsum. Pellentesque facilisis a justo nec tempor. Integer sit amet nibh iaculis nisi viverra porta. In viverra elit eget tincidunt placerat. Cras dolor diam, porta eget purus at, commodo elementum sem. Aliquam nec semper leo (see @eq-logistic).
+
+$$
+f(x)={\frac {L}{1+e^{-k(x-x_{0})}}}
+$${#eq-logistic}
 
 ### Finally, a sub-section
 
-Donec gravida arcu nec felis viverra placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ornare ligula sed sagittis ornare. Quisque magna orci, aliquam vitae nisl non, pellentesque sodales sapien. Donec eleifend posuere magna, quis convallis orci auctor quis. Vestibulum vulputate mi vel efficitur egestas. Suspendisse quis sapien in sem rutrum porttitor sit amet ac lorem. Mauris gravida augue eu purus faucibus, id accumsan est varius. Curabitur id ex egestas, sagittis erat id, eleifend nunc.
+Donec gravida arcu nec felis viverra placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ornare ligula sed sagittis ornare. Quisque magna orci, aliquam vitae nisl non, pellentesque sodales sapien. Donec eleifend posuere magna, quis convallis orci auctor quis. Vestibulum vulputate mi vel efficitur egestas.
+
+> "Suspendisse quis sapien in sem rutrum porttitor sit amet ac lorem. Mauris gravida augue eu purus faucibus, id accumsan est varius. Curabitur id ex egestas, sagittis erat id, eleifend nunc."
 
 
 

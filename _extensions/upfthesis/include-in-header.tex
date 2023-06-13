@@ -12,6 +12,7 @@
 \usepackage{atbegshi} % http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
+
 % to add blank pages
 \usepackage{afterpage}
 \newcommand\blankpage{%
@@ -20,3 +21,17 @@
     \addtocounter{page}{-1}%
     \newpage
 }
+
+\let\paragraph\oldparagraph
+\let\subparagraph\oldsubparagraph
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thechapter}{1em}{}
+\titleformat{\section}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+       {\normalfont\fontfamily{phv}\fontsize{14}{19}\bfseries}{\thesubsection}{1em}{}
+
+\captionsetup[figure]{font=footnotesize,labelfont=footnotesize}
+

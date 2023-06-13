@@ -4,6 +4,7 @@ $endif$
 
 
 \begin{titlepage}
+  \begin{spacing}{1}
     \null\vfil
     \pagenumbering{gobble} 
     \begin{flushleft}%
@@ -23,53 +24,64 @@ $endif$
       \includegraphics[width=5cm]{logo_upf.png}
      \end{flushleft}\par
      \afterpage{\blankpage}
+    \end{spacing}
 \end{titlepage}
-
-
 \newpage
+
+
+\begin{spacing}{1.5}
 
 %----------------------------------------------
 %   Dedication
 %----------------------------------------------
 
 $if(thesis.dedication)$
-
-\vspace*{\baselineskip}
-
-\normalsize{$thesis.dedication$}
-\newpage
-\afterpage{\blankpage}
+\clearpage
+ \begin{flushleft}%
+  \thispagestyle{empty}
+  \vspace*{\stretch{1}}
+  \normalsize\itshape\raggedleft{$thesis.dedication$}
+  \vspace*{\stretch{2}}
+\end{flushleft}
+\clearpage
 $endif$
 
 \pagenumbering{Roman} 
 
-%----------------------------------------------
-%   Acknowledgement
-%----------------------------------------------
+\clearpage
+~
+\thispagestyle{empty}
+\clearpage
 
+%----------------------------------------------
+%   Acknowledgements
+%----------------------------------------------
 
 $if(thesis.acknowledgements)$
+\clearpage
 \chapter*{\sffamily Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
-
 \vspace*{\baselineskip}
-
 \normalsize{$thesis.acknowledgements$}
-\afterpage{\blankpage}
+\clearpage
 $endif$
+
+\clearpage
+~
+\thispagestyle{empty}
+\clearpage
 
 %----------------------------------------------
 %   Abstract (English)
 %----------------------------------------------
 
 $if(thesis.abstract-english)$
+\clearpage
 \section*{\sffamily Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-
-\vspace*{\baselineskip}
-
 \normalsize{$thesis.abstract-english$}
 \vspace*{\baselineskip}
+\clearpage
 $endif$
 
 %----------------------------------------------
@@ -77,24 +89,25 @@ $endif$
 %----------------------------------------------
 
 $if(thesis.abstract-catalan)$
+\clearpage
 \section*{\sffamily Resum}
-
-\vspace*{\baselineskip}
-
 \normalsize{$thesis.abstract-catalan$}
 \afterpage{\blankpage}
+\clearpage
 $endif$
+
 
 %----------------------------------------------
 %   Preface
 %----------------------------------------------
 
 $if(thesis.preface)$
+\clearpage
 \chapter*{\sffamily Preface}
-
+\addcontentsline{toc}{chapter}{Preface}
 \vspace*{\baselineskip}
-
 \normalsize{$thesis.preface$}
-\afterpage{\blankpage}
+\clearpage
 $endif$
 
+\end{spacing}

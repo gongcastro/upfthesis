@@ -15,12 +15,15 @@ book:
 
 thesis:
   title: My thesis at Universitat Pompeu Fabra
-  subtitle: A Quarto extension and template
+  subtitle: A Quarto extension and template # not required
   author: Gonzalo Garcia-Castro
   date: 2023
   department: Department of Templates
   supervisor: Dr. Awesome Supervisor
-  dedication: To the coward that spent time preparing this template instead of actually writing his own thesis.
+  dedication: |
+    To the coward that spent time preparing this template.
+
+    You better have submitted by now.
   acknowledgements: |
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor quis quam non feugiat. Fusce a eleifend sapien. Fusce vel ipsum vitae purus molestie venenatis in in nunc. Fusce blandit placerat ullamcorper. Aliquam erat volutpat. Integer sed ante porttitor, egestas neque at, molestie neque. In id ante ultricies leo molestie tristique id a tortor. Vivamus ullamcorper, lectus vitae tristique accumsan, nunc nulla cursus urna, in ultricies eros odio nec arcu. Etiam non convallis nulla. Nunc imperdiet nibh at scelerisque interdum. Vivamus mattis placerat justo, nec maximus ligula rutrum et. Sed ut rhoncus dui, ut dignissim justo. Donec vitae sapien tempus, dictum libero sit amet, tincidunt leo. Maecenas auctor libero pellentesque finibus porta.
     Curabitur pretium augue odio, a porttitor purus pellentesque vitae. Maecenas lobortis justo ut eleifend blandit. Morbi nulla dolor, imperdiet eget lacus non, accumsan bibendum turpis. Aenean nec viverra est. Duis laoreet nulla ut diam mattis, vitae pellentesque nibh fringilla. Morbi pellentesque, ante a faucibus auctor, diam augue vehicula dui, auctor interdum sem augue at risus. In hac habitasse platea dictumst. Nam sit amet consectetur lacus, eget gravida orci. Fusce suscipit varius dapibus. Aenean enim mi, vestibulum vitae mi maximus, molestie efficitur odio. Duis aliquam blandit sagittis. Nulla ut volutpat erat.
@@ -38,6 +41,7 @@ format:
     page-info: noinfo # info, noinfo
     lot: true # show list of tables? (not required)
     lof: true # show list of figures? (not required)
+    linestretch: 1.5 # can be 1 or 1.5
   upfthesis-docx: default
 
 fig-dpi: 500

@@ -11,9 +11,9 @@ contributes:
     common:
       toc: true
     pdf:
-      include-in-header: include-in-header.tex
-      #include-after-body: include-after-body.tex
-      include-after:
+      embed-resources: true
+      include-in-header:
+        - include-in-header.tex
       template-partials:
         - partials/before-body.tex
         - partials/toc.tex
@@ -31,7 +31,7 @@ contributes:
       lot: true
       code-block-border-left: "#cc0033"
       code-block-bg: "#faf8f7"
-      title-meta: "Thesis"
+      title-meta: "thesis"
     docx:
       #template: templates/reference.docx
       reference-doc: templates/reference.docx

@@ -2,7 +2,7 @@
 title: The second chapter
 ---
 
-Sed eleifend congue aliquam. Aenean risus tellus, tincidunt at venenatis id, maximus feugiat nunc. Phasellus tellus enim, euismod auctor nisi at, blandit aliquam ligula. Donec auctor dignissim eros. Etiam et enim diam. Aenean eget tellus sodales, laoreet risus at, imperdiet mauris. Cras nulla nulla, vehicula id accumsan vitae, malesuada at neque. Curabitur suscipit risus at sodales sagittis. Nam molestie sapien tincidunt placerat semper. Vestibulum ut eleifend urna, at aliquet quam.
+Sed eleifend congue aliquam. Aenean risus tellus, tincidunt at venenatis id, maximus feugiat nunc. Phasellus tellus enim, euismod auctor nisi at, blandit aliquam ligula. Donec auctor dignissim eros. Etiam et enim diam. Aenean eget tellus sodales, laoreet risus at, imperdiet mauris. Cras nulla nulla, vehicula id accumsan vitae, malesuada at neque. Curabitur suscipit risus at sodales sagittis. Nam molestie sapien tincidunt placerat semper. Vestibulum ut eleifend urna, at aliquet quam (see @tbl-1).
 
 
 ```{r tbl-1}
