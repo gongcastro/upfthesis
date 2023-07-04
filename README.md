@@ -1,6 +1,10 @@
 # upfthesis format
 
-This Quarto extension provides a template and format for doctoral dissertations at Universitat Pompeu Fabra (UPF). This template follows the structure and formatting guidelines listed by [Guies BibTIC](https://guiesbibtic.upf.edu/tesis/eng/description):
+This Quarto extension provides a template and format for doctoral dissertations at Universitat Pompeu Fabra (UPF). 
+
+See a rendered example here: [https://github.com/gongcastro/upfthesis/_thesis/thesis.pdf](https://github.com/gongcastro/upfthesis/_thesis/thesis.pdf)
+
+This template follows the structure and formatting guidelines listed by [Guies BibTIC](https://guiesbibtic.upf.edu/tesis/eng/description):
 
 - Cover
 - Title page
@@ -92,5 +96,3 @@ To:
 format:
   upfthesis-pdf: default
 ```
-
-See a rendered example here: [https://github.com/gongcastro/upfthesis/_thesis/thesis.pdf](https://github.com/gongcastro/upfthesis/_thesis/thesis.pdf)
