@@ -26,6 +26,8 @@ For now, only the PDF output in B5 (recommended by UPF) is available. If you wan
 
 ## Installing :arrow_down:
 
+[Quarto](https://quarto.org/docs/get-started/) needs to be 1.3.0 or higher.
+
 ```bash
 quarto use template gongcastro/upfthesis
 ```
