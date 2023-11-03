@@ -26,7 +26,8 @@ For now, only the PDF output in B5 (recommended by UPF) is available. If you wan
 
 ## Installing :arrow_down:
 
-[Quarto](https://quarto.org/docs/get-started/) needs to be 1.3.0 or higher. I also recommend you update you version of [MikTeX](https://miktex.org/howto/install-miktex) to avoid potential problems during compilation.
+[Quarto](https://quarto.org/docs/get-started/) needs to be 1.3.0 or higher.
+I also recommend an updated version of [MikTeX](https://miktex.org/howto/install-miktex) complications during compilation.
 
 ```bash
 quarto use template gongcastro/upfthesis
