@@ -1,2 +1,11 @@
-- name: Render Quarto Project
-  uses: quarto-dev/quarto-actions/render@v2
+name: Render Quarto Project
+
+on: 
+  push:
+  pull_request:
+
+jobs:
+  quarto-render:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: quarto-dev/quarto-actions/render@v2
