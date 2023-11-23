@@ -20,6 +20,17 @@ jobs:
         with:
           r-version: release
           use-public-rspm: true
-
+      
+      - name: Install R dependencies
+        run: |
+          install.packages('pak')
+          pak::pkg_install(c("rmarkdown", "MASS", "broom", "kableExtra"))
+        shell: Rscript {0}
+        
       - uses: quarto-dev/quarto-actions/setup@v2
       - uses: quarto-dev/quarto-actions/render@v2
+      - uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          QUARTO_PUB: ${{ secrets.QUARTO_PUB }}
+          target: quarto-pub
+          path: template.qmd
