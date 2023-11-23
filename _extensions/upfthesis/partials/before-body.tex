@@ -8,23 +8,23 @@ $endif$
     \null\vfil
     \pagenumbering{gobble} 
     \begin{flushleft}%
-      {\LARGE \sffamily $thesis.title$ \par}%
-      \vspace*{2cm}
-      {\Large \sffamily $thesis.subtitle$ \par}%
-      \vskip 1cm%
-      {\large \lineskip .75em \begin{tabular}[t]{c} {\Huge $thesis.author$} \end{tabular}\par}
+      $if(thesis.title)${\LARGE \sffamily $thesis.title$ \par}$else${\vskip 1cm}$endif$
+      \vspace*{1cm}
+      $if(thesis.subtitle)${\Large\sffamily $thesis.subtitle$ \par}$else${\vskip 1cm}$endif$
+      \vskip 2cm%
+      $if(thesis.author)${\large \lineskip .75em \begin{tabular}[t]{c} {\Huge $thesis.author$} \end{tabular}\par}$else${\vskip 1cm}$endif$
       \rule{\linewidth}{1mm} \par
       \vskip 1cm%
-      {\large TESI DOCTORAL UPF / Year $thesis.date$}\\[2cm]
+      {\large TESI DOCTORAL UPF / Year $if(thesis.date)$$thesis.date$\\[2cm]}$else${\vskip 1cm \\[2cm]}$endif$
       {\normalsize THESIS SUPERVISOR}\par
-      {\normalsize $thesis.supervisor$}\par
-      {\normalsize $thesis.department$} \par
+      $if(thesis.supervisor)${\large $thesis.supervisor$\par}$else${\vskip 1cm}$endif$
+      $if(thesis.department)${\large $thesis.department$\par}$else${\vskip 1cm}$endif$
       \vspace{2cm}
-     \centering
+      \centering
       \includegraphics[width=5cm]{$logo$}
-     \end{flushleft}\par
-     \afterpage{\blankpage}
-    \end{spacing}
+    \end{flushleft}\par
+    \afterpage{\blankpage}
+  \end{spacing}
 \end{titlepage}
 \newpage
 
@@ -64,12 +64,10 @@ $if(thesis.acknowledgements)$
 \vspace*{\baselineskip}
 \normalsize{$thesis.acknowledgements$}
 \clearpage
+~
 $endif$
 
-\clearpage
-~
 \thispagestyle{empty}
-\clearpage
 
 %----------------------------------------------
 %   Abstract (English)
