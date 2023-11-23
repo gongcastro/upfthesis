@@ -23,8 +23,11 @@ jobs:
       
       - name: Install R dependencies
         run: |
-          install.packages('pak')
-          pak::pkg_install(c("rmarkdown", "MASS", "broom", "ggplot2", "kableExtra"))
+          install.packages("rmarkdown")
+          install.packages("MASS")
+          install.packages("broom")
+          install.packages("ggplot2")
+          install.packages("kableExtra")
         shell: Rscript {0}
 
       - uses: quarto-dev/quarto-actions/setup@v2
