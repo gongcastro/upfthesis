@@ -8,4 +8,12 @@ jobs:
   quarto-render:
     runs-on: ubuntu-latest
     steps:
+    - uses: quarto-dev/quarto-actions/setup@v2
+    - name: Install pandoc
+      run: |
+        DEB=pandoc-2.19.2-1-amd64.deb
+        wget https://github.com/jgm/pandoc/releases/download/2.19.2/$DEB
+        sudo dpkg -i $DEB
+        pandoc --version
+      shell: bash
     - uses: quarto-dev/quarto-actions/render@v2
