@@ -45,8 +45,8 @@ format:
     linestretch: 1.5 # can be 1 or 1.5
   upfthesis-docx: default
 
-fig-dpi: 500
-fig-align: center
+fig-dpi: 800
+ig-align: center
 lang: en
 
 echo: false
