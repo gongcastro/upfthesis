@@ -22,19 +22,26 @@ flowchart LR
   C --> E[Result two]
 ```
 
+
 ## A second section
 
 Suspendisse maximus mauris in pretium convallis. Cras nec egestas purus. Suspendisse sodales nisl a nulla varius, vel molestie neque convallis. Cras aliquam malesuada lectus et rhoncus. Suspendisse aliquam pretium viverra. Aenean sed lobortis nulla. Ut diam dui, efficitur ac eleifend ornare, porttitor eget nibh. Quisque euismod quam risus, sit amet aliquam mauris mollis in.
 
 Curabitur dictum ultrices pulvinar. In id velit vel arcu aliquam commodo. Quisque eu odio vitae sapien molestie dapibus ut at sapien. In ac dolor ut neque viverra scelerisque eu in nibh. Quisque ac ex libero. Praesent posuere sodales enim. Suspendisse lobortis, justo ut vehicula dapibus, dui libero sodales quam, laoreet mattis mauris urna tempus diam. Maecenas rhoncus lorem ac finibus interdum. Praesent egestas mi at tempor pellentesque. Pellentesque faucibus hendrerit odio eget semper. Proin ultricies libero vitae ligula congue tempor (see @fig-1).
 
+\blandscape
+
 ```{r fig-1}
-#| fig-cap: "This is Figure 1, which I made using ggplot2"
+#| fig-width: 8
+#| fig-height: 4
+#| fig-cap: "This is Figure 1, which I made using ggplot2. To fully appreciate it, I have displayed this image in landscape mode using the `\\blandscape` and `\\elandscape` commands, from the `lscape` LaTeX package`. This feature only works for PDF format."
 library(ggplot2)
 
 ggplot(mtcars, aes(drat, wt)) +
     geom_point()
 ```
+
+\elandscape
 
 Integer sed leo ut velit posuere viverra sit amet iaculis augue. Morbi fermentum arcu augue, ac lobortis metus sagittis et. Nulla faucibus, mauris non lacinia auctor, odio ex condimentum eros, nec euismod libero magna vel arcu. In eu purus nunc. Donec tempor, metus eget aliquet ultricies, felis libero condimentum nulla, hendrerit porta tellus quam sed purus. Quisque egestas sit amet urna non scelerisque. Quisque vestibulum sit amet nibh sit amet dignissim. Maecenas semper, elit sit amet sollicitudin lobortis, urna nisl ullamcorper tortor, et pulvinar risus ligula a felis. Nullam interdum velit non lectus tempus faucibus. Aenean vel pellentesque odio. Sed ut leo at purus lobortis fermentum sed quis ligula. Nullam dictum magna vitae convallis ullamcorper. In ut varius nunc. Vivamus molestie nibh vel ipsum euismod accumsan. Mauris bibendum elit quis nisi venenatis, a suscipit leo egestas.
 

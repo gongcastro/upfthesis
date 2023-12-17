@@ -12,6 +12,10 @@
 \usepackage{atbegshi} % http://ctan.org/pkg/atbegshi
 \AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
+% to display pages in landscape mode (horizontally)
+\usepackage{lscape}
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}} 
 
 % to add blank pages
 \usepackage{afterpage}

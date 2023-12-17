@@ -43,10 +43,9 @@ format:
     lot: true # show list of tables? (not required)
     lof: true # show list of figures? (not required)
     linestretch: 1.5 # can be 1 or 1.5
-  upfthesis-docx: default
 
 fig-dpi: 800
-ig-align: center
+fig-align: center
 lang: en
 
 echo: false
