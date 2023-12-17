@@ -15,10 +15,7 @@ jobs:
         run: sudo apt-get update
 
       - name: Install TeX Live packages
-        run: sudo apt install -y texlive-base texlive-xetex latexmk
-
-      - name: Install LaTeX packages
-        run: sudo apt-get texlive-fonts-extra
+        run: sudo apt install -y texlive-base texlive-xetex latexmk texlive-fonts-extra
         
       - uses: r-lib/actions/setup-pandoc@v2
 
