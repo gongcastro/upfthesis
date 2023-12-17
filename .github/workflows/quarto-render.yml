@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update
-        run: apt-get update
+        run: sudo apt-get update
 
       - name: Install TeX Live packages
         run: sudo apt install -y texlive-base texlive-xetex latexmk
