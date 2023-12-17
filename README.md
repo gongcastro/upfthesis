@@ -99,3 +99,9 @@ To:
 format:
   upfthesis-pdf: default
 ```
+
+## Tricks and comments
+
+* **Horizontal pages**: this template defines the `\blandscape` and `\elandscape` commands (from the `lscape` LaTeX package) to flip pages to landscape mode. This wway some figures or tables may take more space and be easier to read. This is especially convenient for B5 format.
+* **Logo in colour**: To use the logo in colour, just replace the `logo.png` file in the main directory with the official [logo](https://www.upf.edu/web/marca/desc-marca) in colour.
+* **Low-level sections**: for some reason, I have not been able to add section headers lower than 5 (e.g., 6, 7). I recommend reducing the number of sub-sections. This is issue is currently open (#7) and help is appreciated.
