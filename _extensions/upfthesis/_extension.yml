@@ -42,3 +42,12 @@ contributes:
             - "cairo-png"
           dpi: 300
           out.width: "80%"
+    odt:
+      reference-doc: templates/reference.docx
+      knitr:
+        opts_chunk:
+          dev: "png"
+          dev-args:
+            - "cairo-png"
+          dpi: 300
+          out.width: "80%"
