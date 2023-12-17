@@ -11,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Update
+        run: apt-get update
+
       - name: Install TeX Live packages
         run: sudo apt install -y texlive-base texlive-xetex latexmk
 
@@ -20,10 +23,7 @@ jobs:
         with:
           r-version: release
           use-public-rspm: true
-      
-      - name: Update
-        run: apt-get update
-        
+    
       - name: Install R dependencies
         run: |
           install.packages("rmarkdown")
