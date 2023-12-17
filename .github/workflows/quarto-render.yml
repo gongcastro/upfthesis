@@ -21,6 +21,9 @@ jobs:
           r-version: release
           use-public-rspm: true
       
+      - name: Update
+        run: apt-get update
+        
       - name: Install R dependencies
         run: |
           install.packages("rmarkdown")
