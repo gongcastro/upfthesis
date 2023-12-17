@@ -30,6 +30,7 @@ jobs:
           install.packages("MASS")
           install.packages("broom")
           install.packages("ggplot2")
+          install.packages("gt")
           install.packages("kableExtra")
         shell: Rscript {0}
 
