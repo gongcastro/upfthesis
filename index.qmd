@@ -2,4 +2,8 @@
 title: "{-}"
 ---
 
+::: {.content-visible when-format="pdf"}
+
 \pagenumbering{arabic} 
+
+:::

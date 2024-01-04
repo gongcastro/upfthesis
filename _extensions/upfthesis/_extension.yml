@@ -32,6 +32,7 @@ contributes:
       code-block-border-left: "#cc0033"
       code-block-bg: "#faf8f7"
       title-meta: "thesis"
+    html: default
     docx:
       #template: templates/reference.docx
       reference-doc: templates/reference.docx
